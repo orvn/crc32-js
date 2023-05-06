@@ -1,0 +1,30 @@
+{
+    "name": "js-crc32",
+    "description": "A CRC32 and CRC16 checksum.",
+    "version": "0.1.0",
+    "homepage": "https://github.com/orvn/js-crc32",
+    "author": "Orun Bhuiyan (https://github.com/orvn)",
+    "repository": "orvn/js-crc32",
+    "bugs": {
+        "url": "https://github.com/orvn/js-crc32/issues"
+    },
+    "license": "APL-2.0",
+    "files": [
+        "index.js"
+    ],
+    "main": "index.js",
+    "engines": {
+        "node": ">=0.8.0"
+    },
+    "scripts": {
+        "test": "mocha"
+    },
+    "devDependencies": {
+        "mocha": "^10.2.0"
+    },
+    "keywords": [
+        "checksum",
+        "hash",
+        "digest"
+    ]
+}
