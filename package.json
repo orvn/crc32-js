@@ -10,7 +10,8 @@
     },
     "license": "APL-2.0",
     "files": [
-        "index.js"
+        "index.js",
+        "lookups.js"
     ],
     "main": "index.js",
     "engines": {
