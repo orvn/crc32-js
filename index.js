@@ -5,7 +5,7 @@
 
 'use strict';
 
-function crc32Polynomial(str) {
+module.exports = function crc32Polynomial(str) {
     let crc = 0xFFFFFFFF;
   
     for (let i = 0, len = str.length; i < len; i++) {
