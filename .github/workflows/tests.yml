@@ -10,7 +10,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  mocha:
 
     runs-on: ubuntu-latest
 
