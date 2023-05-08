@@ -4,7 +4,7 @@
  */
 
 'use strict';
-import { crc32Table } from "./lookups.js";
+const { crc32Table } = require('./lookups.js');
 
 // Polynomial division implementation (slower, non-default)
 function crc32_polynomialDivision(str) {
@@ -35,6 +35,7 @@ function crc32_lookupTable(str) {
 }
 
 // Export complete crc32 function
+
 module.exports = function crc32(str, usePolynomialDivision = false) {
     if (usePolynomialDivision) {
     return crc32_polynomialDivision(str);
