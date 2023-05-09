@@ -29,7 +29,7 @@ CRC32 might be attractive as a hashing function because of its concise nature. H
 
 At first it might seem that the chance of collision is low, because CRC32 results in fixed length 32-bit values. However, the birthday paradox should be considered when checking for the probability of collision between any two values, as a set grows.
 
-$`P = 1 - ( k!/(k^n*(k-n!)) )`$
+### $`P = 1 - \frac{k!}{k^n (k-n)!}`$
 
 where 
 - `n` is the size of the set
