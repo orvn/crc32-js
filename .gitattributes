@@ -1,12 +1,5 @@
 # Enforce unix newlines
 * text   eol=lf
 
-# Common image attributes
-*.png      binary
-*.jpg      binary
-*.jpeg     binary
-*.gif      binary
-*.tif      binary
-*.tiff     binary
-*.ico      binary
-*.svg      text
+*.png    binary
+*.jpg    binary
