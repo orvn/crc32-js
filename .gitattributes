@@ -1,2 +1,5 @@
 # Enforce unix newlines
-* text eol=lf
+* text   eol=lf
+
+*.png    binary
+*.jpg    binary
