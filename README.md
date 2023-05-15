@@ -36,7 +36,7 @@ where
 - `k` is the total number of possible hashes in the algorithm (2^32)
 - `P` is the probability of a collision
 
-Applying this, if we have a set size of 1000 different strings, the probability of a collision between two of them is `0.01164%`, or 1 in 8600. Clearly, this is a good function for checksums, but not an ideal function for most applications of hash functions.
+Applying this, if we have a set size of 1000 different strings, the probability of a collision between two of them is `0.01164%`, or `1 in 8600`. Clearly, this is a good function for checksums, but not an ideal function for most applications of hash functions.
 
 
 ## Roadmap
