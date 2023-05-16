@@ -46,6 +46,5 @@ Applying this, if we have a set size of 1000 different strings, the probability 
 Other features that are coming soon include the following:
 
 - Argument to toggle between CRC32a and CRC32b
-- Argument to toggle between hexadecimal and decimal output
 - CRC16 implementation (currently incomplete)
 - Docs that explain how CRC32 works in more detail
