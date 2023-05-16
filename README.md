@@ -17,10 +17,12 @@ Included is a 32-bit and a 16-bit CRC (cyclic redundancy checksum) function. Thi
 After installing and importing the package (npm and yarn entries coming soon), it can be used as follows
 
 ```js
-crc32(str, [usePolynomialDivision])
+crc32(str, [usePolynomialDivision], [format])
 ```
 
 Include a string to hash, and optionally elect to use polynomial division, which is set to `false` by default. Instead of polynomial division, the default is to use a pre-calculated lookup table, which is faster. This is also the implementation strategy used within the C and PHP source code.
+
+The last option defaults to `true`, making the output a hexadecimal value. If set to `false` the output will be in decimal format.
 
 
 ## Collision resistance
