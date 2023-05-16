@@ -1,6 +1,6 @@
 # JS CRC32 (and CRC16)
 
-![package image](assets/images/graph-image.png)
+<img src="/assets/images/graph-image.png" alt="package graph image" width="500">
 
 A Javascript CRC checksum or hashing implementation that yields the same result as C and PHP CRC functions.
 
