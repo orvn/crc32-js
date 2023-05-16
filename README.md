@@ -1,6 +1,6 @@
 # JS CRC32 (and CRC16)
 
-![package image](assets/images/graph-image.png)
+<img src="/assets/images/graph-image.png" alt="package graph image" width="500">
 
 A Javascript CRC checksum or hashing implementation that yields the same result as C and PHP CRC functions.
 
@@ -17,10 +17,12 @@ Included is a 32-bit and a 16-bit CRC (cyclic redundancy checksum) function. Thi
 After installing and importing the package (npm and yarn entries coming soon), it can be used as follows
 
 ```js
-crc32(str, [usePolynomialDivision])
+crc32(str, [usePolynomialDivision], [format])
 ```
 
 Include a string to hash, and optionally elect to use polynomial division, which is set to `false` by default. Instead of polynomial division, the default is to use a pre-calculated lookup table, which is faster. This is also the implementation strategy used within the C and PHP source code.
+
+The last option defaults to `true`, making the output a hexadecimal value. If set to `false` the output will be in decimal format.
 
 
 ## Collision resistance
@@ -44,6 +46,5 @@ Applying this, if we have a set size of 1000 different strings, the probability 
 Other features that are coming soon include the following:
 
 - Argument to toggle between CRC32a and CRC32b
-- Argument to toggle between hexadecimal and decimal output
 - CRC16 implementation (currently incomplete)
 - Docs that explain how CRC32 works in more detail
