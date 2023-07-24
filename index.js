@@ -4,42 +4,45 @@
  */
 
 'use strict';
-const { crc32Table } = require('./lookups.js');
+const { crc16Table, crc32Table } = require('./lookups.js');
 
-// Polynomial division implementation (slower, non-default)
-function crc32_polynomialDivision(str) {
-    const polynomial = 0xEDB88320;
-    let crc = 0xFFFFFFFF;
-
-    for (let i = 0, len = str.length; i < len; i++) {
-    let byte = str.charCodeAt(i);
-    crc ^= byte;
-    for (let j = 0; j < 8; j++) {
-        const mask = -(crc & 1);
-        crc = (crc >>> 1) ^ (polynomial & mask);
-    }
-    }
-    return (crc ^ 0xFFFFFFFF) >>> 0;
-}
-
-// Lookup table implementation (this is the default because it's faster, due to being a precalculated table)
-function crc32_lookupTable(str) {
-    let crc = 0xFFFFFFFF;
-
-    for (let i = 0, len = str.length; i < len; i++) {
-    crc = (crc >>> 8) ^ crc32Table[(crc ^ str.charCodeAt(i)) & 0xFF];
-    }
-
-    return (crc ^ 0xFFFFFFFF) >>> 0;
-}
-
-// Export complete crc32 function
-module.exports = function crc32(str, usePolynomialDivision = false, hexFormat = true) {
+function crc(str, table, polynomial, usePolynomialDivision = false, hexFormat = true) {
     let crc;
     if (usePolynomialDivision) {
-    crc = crc32_polynomialDivision(str);
+        crc = crc_polynomialDivision(str, polynomial);
     } else {
-    crc = crc32_lookupTable(str);
+        crc = crc_lookupTable(str, table);
     }
     return hexFormat ? crc.toString(16).padStart(8, '0') : crc.toString(10);
+}
+
+function crc_polynomialDivision(str, polynomial) {
+    let crc = 0xFFFFFFFF;
+    for (let i = 0, len = str.length; i < len; i++) {
+        let byte = str.charCodeAt(i);
+        crc ^= byte;
+        for (let j = 0; j < 8; j++) {
+            const mask = -(crc & 1);
+            crc = (crc >>> 1) ^ (polynomial & mask);
+        }
+    }
+    return (crc ^ 0xFFFFFFFF) >>> 0;
+}
+
+function crc_lookupTable(str, table) {
+    let crc = 0xFFFFFFFF;
+    for (let i = 0, len = str.length; i < len; i++) {
+        crc = (crc >>> 8) ^ table[(crc ^ str.charCodeAt(i)) & 0xFF];
+    }
+    return (crc ^ 0xFFFFFFFF) >>> 0;
+}
+
+// Export complete crc32 and crc16 functions
+module.exports = {
+    crc32: function(str, usePolynomialDivision = false, hexFormat = true) {
+        return crc(str, crc32Table, 0xEDB88320, usePolynomialDivision, hexFormat);
+    },
+    crc16: function(str, usePolynomialDivision = false, hexFormat = true) {
+        return crc(str, crc16Table, 0x1021, usePolynomialDivision, hexFormat);
+    }
 }
