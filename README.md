@@ -1,8 +1,8 @@
-# JS CRC32 (and CRC16)
+# CRC32 (and CRC16) in JS
 
 <img src="/assets/images/graph-image.png" alt="package graph image" width="500">
 
-A Javascript CRC checksum or hashing implementation that yields the same result as C and PHP CRC functions.
+A better Javascript CRC checksum or hashing implementation that yields the same result as C and PHP CRC functions.
 
 
 ## Purpose
