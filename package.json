@@ -4,7 +4,10 @@
     "version": "0.1.0",
     "homepage": "https://github.com/orvn/crc32-js",
     "author": "Orun Bhuiyan (https://github.com/orvn)",
-    "repository": "orvn/crc32-js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/orvn/crc32-js.git"
+    },
     "bugs": {
         "url": "https://github.com/orvn/crc32-js/issues"
     },
