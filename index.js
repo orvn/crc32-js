@@ -1,5 +1,5 @@
 /*!
- * js-crc32 <https://github.com/orvn/js-crc32>
+ * crc32-js <https://github.com/orvn/crc32-js>
  * Apache license
  */
 

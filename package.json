@@ -1,12 +1,12 @@
 {
-    "name": "js-crc32",
+    "name": "crc32-js",
     "description": "A CRC32 and CRC16 checksum.",
     "version": "0.1.0",
-    "homepage": "https://github.com/orvn/js-crc32",
+    "homepage": "https://github.com/orvn/crc32-js",
     "author": "Orun Bhuiyan (https://github.com/orvn)",
-    "repository": "orvn/js-crc32",
+    "repository": "orvn/crc32-js",
     "bugs": {
-        "url": "https://github.com/orvn/js-crc32/issues"
+        "url": "https://github.com/orvn/crc32-js/issues"
     },
     "license": "APL-2.0",
     "files": [
