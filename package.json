@@ -1,7 +1,7 @@
 {
     "name": "crc32-js",
     "description": "A better Javascript CRC checksum or hashing implementation that yields the same result as C and PHP CRC functions",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "homepage": "https://github.com/orvn/crc32-js",
     "author": "Orun Bhuiyan (https://github.com/orvn)",
     "repository": {
